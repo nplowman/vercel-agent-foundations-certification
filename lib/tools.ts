@@ -5,7 +5,7 @@ import { ApiRequestError, getCategories, getProducts, getProductById, getProduct
 getBackOfficeSales, getBackOfficeStock, getBackOfficeSupportTickets } from "@/lib/api";
 import { start } from "workflow/api";
 import { returnFlow } from "@/lib/workflows/return-flow";
-import { createOrGetSandbox } from "@/lib/sandbox";
+import { createOrGetSandbox, SANDBOX_NAME } from "@/lib/sandbox";
 
 export const searchProducts = tool({
   description: `Search the Vercel swag store product catalog. Use this whenver the user asks about products, what the store sells, or wants recommdantions. Optionally narrow results to a single category.`,
